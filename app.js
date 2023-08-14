@@ -17,22 +17,26 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 
-document.getElementById("form-id").addEventListener("submit", function(e) {
-  e.preventDefault(); //Prevent default form submission
 
-  //Retrieve Form data
+function handleSubmit() {
+  //retrieve form data
   let formData = new FormData(document.getElementById("form-id"));
 
   let email = 'help@sc.com';
   let emailSubject = 'Form Submission';
   let emailBody = 'Form data:\n' + JSON.stringify(Object.fromEntries(formData));
 
-  //Display pop-up
+  //Display message
   let messageElement = document.getElementById('message');
-  messageElement.textContent = "Your form is submitted. Please <a href="#">click here</a> to proceed to the final step of registration";
+  messageElement.innerHTML = "Your form is submitted. Please <a href='#'>click here</a> to proceed to the final step of registration";
   messageElement.style.color = "#0f0f0f";
-
 
   //Clear form fields
   document.getElementById('form-id').reset();
+}
+
+document.getElementById("form-id").addEventListener("submit", function(e) {
+  e.preventDefault(); //Prevent default form submission
+
+  handleSubmit();
 });
