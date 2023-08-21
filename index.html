@@ -46,34 +46,41 @@
           </div>
         </div>
 
+<!-- FORM DATA -->
         <div class="contact-form">
           <span class="circle one"></span>
           <span class="circle two"></span>
 
-          <form action="index.html" autocomplete="off" id="form-id">
+          <form action="process-form.php" autocomplete="off" id="form-id">
             <h3 class="title">Fill your details here:</h3>
+
             <div class="input-container">
               <input type="text" name="name" class="input" />
-              <label for="">Username</label>
+              <label for="name">Username</label>
               <span>Username</span>
             </div>
+
             <div class="input-container">
               <input type="email" name="email" class="input" />
-              <label for="">Email</label>
+              <label for="email">Email</label>
               <span>Email</span>
             </div>
+
             <div class="input-container">
               <input type="tel" name="phone" class="input" />
               <label for="">Phone</label>
               <span>Phone</span>
             </div>
+
             <div class="input-container textarea">
               <textarea name="message" class="input"></textarea>
               <label for="">Name of Event</label>
               <span>Message</span>
             </div>
+
             <input type="submit" value="Submit" class="btn" id="submit" />
             <p id="message" class="message"></p>
+
           </form>
         </div>
       </div>
